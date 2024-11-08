@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="product.css">
+
+    <style type="text/css">
+        .modal-content {
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .modal-header {
+            border-bottom: none !important;
+            margin-left: 90px;
+        }
+        .modal-footer {
+            border-top: none;
+            text-align: center;
+            width: 100%;
+        }
+        #password, #email, #signUpName, #signUpEmail, #signUpPassword, #signUpConfirmPassword {
+            border-radius: 30px !important;
+            padding: 15px !important;
+        }
+        .btn-primary {
+            border-radius: 30px !important;
+            background-color: #667eea;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #764ba2;
+        }
+        .modal-footer p {
+            font-size: 16px !important;
+        }
+        .modal-footer a {
+            color: #764ba2;
+            text-decoration: none;
+        }
+        .modal-footer a:hover {
+            color: #667eea;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html"><img src="iyappaa.png"  width="120" height="60"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="productpage2.html">All Products <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="sweet.html">Sweets</a>
+                        <a class="dropdown-item" href="snacks.html">Snacks</a>
+                        <a class="dropdown-item" href="groceries.html">Groceries</a>
+                        <a class="dropdown-item" href="oil.html">Oil</a>
+                        <a class="dropdown-item" href="rice.html">Rice</a>
+                        <a class="dropdown-item" href="candies.html">Candies</a>
+                        <a class="dropdown-item" href="herbal.html">Organic Products</a>
+                        <a class="dropdown-item" href="homeappliances.html">Home Appliances</a>
+                        <a class="dropdown-item" href="poojaitems.html">Pooja Items</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-danger" type="button" style="margin-left: 10px;" data-toggle="modal" data-target="#loginModal">Login/Signup</button>
+            </form>
+        </div>
+    </nav>
+
+    <div>
+       <img src="Website Banner1.jpg" width="100%">
+    </div>
+
+    <br>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="bg-dark">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active" data-category="sweets"
+                    data-toggle="tooltip" title="Sweets">
+                    <img src="laddu.png" class="category-icon"><span class="category-name">Sweets</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" data-category="snacks"
+                    data-toggle="tooltip" title="Snacks">
+                    <img src="snack.png" class="category-icon"><span class="category-name">Snacks</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" data-category="groceries"
+                    data-toggle="tooltip" title="Groceries">
+                    <img src="grocery.png" class="category-icon"><span class="category-name">Groceries</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" data-category="candies"
+                    data-toggle="tooltip" title="Candies">
+                    <img src="sweets.png" class="category-icon"><span class="category-name">Candies</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" data-category="rice" data-toggle="tooltip"
+                    title="Rice">
+                    <img src="rice.png" class="category-icon"><span class="category-name">Rice</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" data-category="oil"
+                    data-toggle="tooltip" title="Oil">
+                    <img src="olive-oil.png" class="category-icon"><span class="category-name">Oil</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" data-category="herbal"
+                    data-toggle="tooltip" title="Herbal">
+                    <img src="herbal.png" class="category-icon"><span class="category-name">Herbal</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" data-category="homeappliances"
+                    data-toggle="tooltip" title="HomeAppliances">
+                    <img src="electric-appliance.png" class="category-icon"><span class="category-name">Home Appliances</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" data-category="poojaitems"
+                    data-toggle="tooltip" title="PoojaItems">
+                    <img src="incense.png" class="category-icon"><span class="category-name">Pooja Items</span>
+                </a>
+            </div>
+        </nav>
+
+      <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto" id="loginModalLabel">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" class="text-decoration-none">Forgot Password?</a>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Don't have an account? <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#signUpModal" data-dismiss="modal">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto" id="signUpModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="signUpForm">
+                        <div class="mb-3">
+                            <label for="signUpName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signUpName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signUpPassword" placeholder="Create a password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirm your password" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Already have an account? <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+          
+       
+
+        <!-- Main content -->
+        <div id="main-content" class="flex-grow-1">
+            <!-- Horizontal Tabs -->
+            <ul class="nav nav-tabs" id="categoryTabs">
+                <!-- Dynamic tabs will be injected here -->
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="tabContent">
+                <!-- Dynamic tab content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="footer">
+        <div class="empty"></div>
+        <div class="address">
+           
+            <div class="iyappaa-address">
+
+                 <b>Head Office</b>
+
+                 <br>
+
+                IYYAPPAA SWEETS & SNACKS INC
+
+                <p>2721, Markham Road, Unit #18,
+                <br>Scaraborough-M1X 1L5, Toronto,
+                Canada</p>
+            </div>
+
+
+            <div class="branches">
+
+                <b>Branches</b>
+
+                <br>
+
+                IYYAPPAA FOOD INDUSTRIES UK LTD
+
+                <p>No 5, Mameulah Court, Newmachar,
+                <br>Aberdeenshire, Ab21OLS,
+                United Kingdom</p>
+            </div>
+
+
+            <b>Available Countries</b>
+
+            <br>
+
+            <div class="countries">
+                <div class="canada">
+                    <p>Canada</p>
+                    <img src="https://img.icons8.com/?size=100&id=Dum84gAXfBP6&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>USA</p>
+                     <img src="https://img.icons8.com/?size=100&id=yzSggttkqLf4&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>France</p>
+                     <img src="https://img.icons8.com/?size=100&id=5RtaKEr09Jy6&format=png&color=000000" class="flag">
+                </div>
+                 <div class="canada">
+                    <p>Switzerland</p>
+                     <img src="https://img.icons8.com/?size=100&id=nz6Zx2vJbzRG&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>Germany</p>
+                     <img src="https://img.icons8.com/?size=100&id=OyqucOGoByl9&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>UK</p>
+                     <img src="https://img.icons8.com/?size=100&id=xapj7ZzAUZKI&format=png&color=000000" class="flag">
+                </div>
+            </div>
+        </div>
+        <div class="footer-category">
+            <b>Categories</b>
+            <div class="category-item">
+                <p>Sweets</p>
+                <p>Snacks</p>
+                <p>Candies</p>
+                <p>Groceries</p>
+                <p>Rice</p>
+                <p>Oil</p>
+                <p>Herbal & Organic</p>
+                <p>Home Appliances</p>
+            </div>
+             <b>Popular Brands</b>
+             <div class="brand-name">
+                 <p>Iyappaa</p>
+                 <p>Amirth</p>
+                 <p>Venbaa</p>
+                 <p>Little Krishna</p>
+             </div>
+        </div><br>
+        <div class="faq">
+            <b>FAQ</b>
+            <div class="term-condition">
+                <h2>Terms & Conditions</h2>
+            </div>
+            <b>Website</b>
+            <div class="website">
+                <p>www.iyappaa.com</p>
+            </div>
+             <b>Contact Us</b><br>
+             <input type="" name="" class="contact-input"> @gmail.com
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script src="product.js"></script>
+</body>
+
+</html>

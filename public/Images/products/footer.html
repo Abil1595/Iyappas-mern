@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Footer Example</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+        }
+
+        .footer {
+            background-color: #D8B1A0; /* Darker background for richness */
+            padding: 30px 0;
+            border-top: 1px solid #dee2e6; /* Light border at the top */
+            color: #4A2C2B; /* White text color for contrast */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            position: relative;
+        }
+
+        .address, .footer-category, .faq {
+            flex: 1 1 300px; /* Flexible basis for responsive design */
+            margin: 10px 20px; /* Spacing around the sections */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for contrast */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+            transition: background 0.3s; /* Smooth transition for hover effects */
+        }
+
+        .address:hover, .footer-category:hover, .faq:hover {
+            background: rgba(255, 255, 255, 0.2); /* Change background on hover */
+        }
+
+        h5 {
+            color: #A77B6B; /* Bright yellow for headings */
+            margin-bottom: 10px; /* Space below headings */
+        }
+
+        .countries, .category-item, .brand-name {
+            display: flex;
+            flex-wrap: wrap; /* Wrap items in smaller screens */
+        }
+
+        .countries div, .category-item li, .brand-name li {
+            margin-right: 15px;
+            margin-bottom: 10px;
+            transition: transform 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .countries div {
+            display: flex;
+            align-items: center; /* Center align flag and text */
+        }
+
+        .flag {
+            width: 30px; /* Fixed size for flags */
+            height: auto;
+            margin-left: 5px;
+        }
+
+        .contact-input {
+            width: calc(100% - 50px); /* Full width minus the email suffix */
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            transition: border-color 0.3s; /* Smooth transition for focus */
+        }
+
+        .contact-input:focus {
+            border-color: #D8B1A0; /* Change border color on focus */
+            outline: none; /* Remove default outline */
+        }
+
+        .footer-category b{
+            margin-top: 20px; /* Space between sections */
+            display: block;
+            color: #A77B6B; /* Bright yellow for section titles */
+            text-align: center; /* Center the title */
+        }
+        
+        .faq b {
+        	margin-top: 20px; /* Space between sections */
+            display: block;
+            color: #A77B6B;
+        }
+        .category-item, .brand-name {
+            display: flex;
+            flex-direction: row; /* Row direction for columns */
+            justify-content: center; /* Centering items */
+            flex-wrap: wrap; /* Wrap items to new rows */
+            margin-top: 10px; /* Space above the category items */
+            margin-right: 30px;
+        }
+
+        .category-item ul, .brand-name ul {
+            display: flex;
+            flex-direction: column; /* Column layout for list items */
+            margin: 0 10px; /* Space between the two columns */
+        }
+
+        .category-item li, .brand-name li {
+            
+            margin: 5px 0; /* Vertical spacing for items */
+            color: #4A2C2B; /* White text for items */
+        }
+
+        .category-item li:hover, .brand-name li:hover {
+            color: #A77B6B; /* Bright yellow on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+    </style>
+</head>
+<body>
+<div class="footer">
+    <div class="address">
+        <h5>Head Office</h5>
+        <p><strong>IYYAPPAA SWEETS & SNACKS INC</strong></p>
+        <p>2721, Markham Road, Unit #18,<br>Scarborough - M1X 1L5, Toronto,<br>Canada</p>
+
+        <h5>Branches</h5>
+        <p><strong>IYYAPPAA FOOD INDUSTRIES UK LTD</strong></p>
+        <p>No 5, Mameulah Court, Newmachar,<br>Aberdeenshire, AB21 0LS,<br>United Kingdom</p>
+
+        <h5>Available Countries</h5>
+        <div class="countries">
+            <div class="canada">
+                <p>Canada</p>
+                <img src="https://img.icons8.com/?size=100&id=Dum84gAXfBP6&format=png&color=ffffff" class="flag">
+            </div>
+            <div class="canada">
+                <p>USA</p>
+                <img src="https://img.icons8.com/?size=100&id=yzSggttkqLf4&format=png&color=ffffff" class="flag">
+            </div>
+            <div class="canada">
+                <p>France</p>
+                <img src="https://img.icons8.com/?size=100&id=5RtaKEr09Jy6&format=png&color=ffffff" class="flag">
+            </div>
+            <div class="canada">
+                <p>Switzerland</p>
+                <img src="https://img.icons8.com/?size=100&id=nz6Zx2vJbzRG&format=png&color=ffffff" class="flag">
+            </div>
+            <div class="canada">
+                <p>Germany</p>
+                <img src="https://img.icons8.com/?size=100&id=OyqucOGoByl9&format=png&color=ffffff" class="flag">
+            </div>
+            <div class="canada">
+                <p>UK</p>
+                <img src="https://img.icons8.com/?size=100&id=xapj7ZzAUZKI&format=png&color=ffffff" class="flag">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-category">
+        <b>Categories</b>
+        <div class="category-item">
+            <ul>
+                <li>Sweets</li>
+                <li>Snacks</li>
+                <li>Groceries</li>
+                <li>Rice</li>
+                <li>Oil</li>
+          </ul>
+            <ul>
+                <li>Candies</li>
+                <li>Herbal</li>
+                <li>Home Appliances</li>
+                <li>Pooja Items</li>
+          </ul>
+        </div>
+        
+        <b>Popular Brands</b>
+        <div class="brand-name">
+            <ul>
+                <li>Iyyappaa</li>
+                <li>Amrith</li>
+                <li>Venbaa</li>
+                <li>Little Krishna</li>
+           </ul>
+           <ul>
+                <li>Iyyappaa</li>
+                <li>Amrith</li>
+                <li>Venbaa</li>
+                <li>Little Krishna</li>
+           </ul>
+        </div>
+    </div>
+
+    <div class="faq">
+        <b>FAQ</b>
+        <div class="term-condition">
+            <h2>Terms & Conditions</h2>
+        </div>
+        <b>Website</b>
+        <div class="website">
+            <p>www.iyappaa.com</p>
+        </div>
+        <b>Contact Us</b>
+        <input type="email" name="contact" class="contact-input" placeholder="Your Email"> @gmail.com
+    </div>
+</div>
+</body>
+</html>

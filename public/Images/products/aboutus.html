@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iyappaa-About us</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="aboutus.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="iyappaa.png" width="120" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active me-4" aria-current="page" href="index.html">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-4" href="productpage2.html">All Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle me-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sweet.html">Sweets</a></li>
+                            <li><a class="dropdown-item" href="snacks.html">Snacks</a></li>
+                            <li><a class="dropdown-item" href="groceries.html">Groceries</a></li>
+                            <li><a class="dropdown-item" href="oil.html">Oil</a></li>
+                            <li><a class="dropdown-item" href="rice.html">Rice</a></li>
+                            <li><a class="dropdown-item" href="candies.html">Candies</a></li>
+                            <li><a class="dropdown-item" href="herbal.html">Organic Products</a></li>
+                            <li><a class="dropdown-item" href="homeappliances.html">Home Appliances</a></li>
+                            <li><a class="dropdown-item" href="poojaitems.html">Pooja Items</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Aboutus.html">About Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" style="width: 120px; align-items: center;">Search</button>
+                    <button class="btn btn-outline-danger" type="button" style="margin-left: 10px; width: 200px; align-items: center;" data-bs-toggle="modal" data-bs-target="#loginModal">Login/Signup</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto" id="loginModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" class="text-decoration-none">Forgot Password?</a>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Don't have an account? <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#signUpModal" data-bs-dismiss="modal">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto" id="signUpModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signUpName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signUpName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signUpPassword" placeholder="Create a password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirm your password" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Already have an account? <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div class="container-fluid mt-1">
+        <div class="row">
+            <!-- First Card with Two Columns -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="about.jpg" class="card-img" alt="Image">
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="card-body">
+                                <h5 class="card-title">About us</h5>
+                                <p class="card-text">Welcome to Iyappaa Food Industries, your one-stop shop for a wide range of delicious snacks, sweets, and groceries. Enjoy quality products, friendly service, and great prices all in one place. Your trusted source for all your grocery and snack needs. We’re dedicated to providing high-quality products and exceptional service.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--aboutus-->
+
+        <div class="row">
+            <!-- First Card with Two Columns -->
+            <div class="col-md-12 mt-3">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="card-body">
+                                <div class="container">
+                                <h5 class="card-title">Our Mission</h5>
+                                <p class="card-text">Our mission is to provide our customers with a wide selection of delicious and nutritious snacks and groceries. We strive to make it easy for you to find everything you need, all in one place.</p>
+
+                                <div class="row">
+                                    <div class="col-md-6 mt-2">
+                                        <div class="card quality">
+                                            <h6 class="card-title innerTitle">Quality</h6>
+                                            <p class="card-text innerText">We source our products from trusted suppliers and ensure they meet the highest standards.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mt-2">
+                                        <div class="card quality">
+                                            <h6 class="card-title innerTitle">Variety</h6>
+                                            <p class="card-text innerText">We offer a wide range of high-quality products to meet the diverse needs of our valued customers.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mt-2">
+                                        <div class="card quality">
+                                            <h6 class="card-title innerTitle">Convenience</h6>
+                                            <p class="card-text innerText">We strive to make shopping with us a seamless experience. Our stores are designed for your convenience, offering a wide selection of products to meet your needs. Our products are distributed to all shops, making them easily accessible to everyone.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="mission.jpg" class="card-img" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--ourmission-->
+
+        <div class="history mt-3">
+            <img src="Our History.png" width="100%">
+        </div><!--history-->
+        
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mt-3">
+                    <div class="container">
+                        <div class="row no-gutters">
+                            <div class="col-md-12 d-flex align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Our Customers</h5>
+                                    <p class="card-text">We are committed to providing our customers with the best possible experience. We listen to their feedback and strive to continuously improve our products and services.</p>
+                                
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row customers">
+                            <div class="col-md-4 scroll-left">
+                                <h6 class="innerTitle">Families</h6>
+                                <p class="innerText">We offer a wide variety of family-friendly products, including healthy snacks and ready-to-eat meals.</p>
+                            </div>
+                            <div class="col-md-4 scroll-left">
+                                <h6 class="innerTitle">Individuals</h6>
+                                <p class="innerText">We offer a wide variety of products to meet the needs of individuals, including healthy snacks & specialty items.</p>
+                            </div>
+                            <div class="col-md-4 scroll-right">
+                                <h6 class="innerTitle">Businesses</h6>
+                                <p class="innerText">We offer bulk ordering and delivery services for businesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--customer-->
+
+        <div class="row commitment">
+            <div class="col-md-12">
+                <div class="card mt-3">
+                    <div class="col-md-12">
+                        <img src="commitment.jpg" class="commitment-img" alt="Commitment Image">
+                    </div>
+
+                    <div class="container mt-3">
+                        <h5 class="card-title">Our Commitment to Quality</h5>
+                        <p class="card-text">We are committed to providing our customers with the highest quality products and services. We source our products from trusted suppliers and maintain strict quality control standards.</p>
+                    
+                    <div class="row commitment-card">
+                        <div class="col-md-3">
+                            <div class="quality-control">
+                                <center>
+                                   <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
+                                   <h5 class="innerTitle">Quality Control</h5>
+                                </center>
+                                <p class="innerText">We provide high-quality products through trusted suppliers & strict quality control.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="quality-control">
+                                <center>
+                                    <img src="store.png" class="store" alt="Store Icon">
+                                    <h5 class="innerTitle">Variety</h5>
+                                </center>
+                                <p class="innerText">We offer a wide range of grocery items, from everyday essentials to exotic ingredients.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="quality-control">
+                                <center>
+                                    <img src="food-safety.png" class="store" alt="Store Icon">
+                                    <h5 class="innerTitle">Food Safety</h5>
+                                </center>
+                                <p class="innerText">We adhere to the highest standards of food safety, hygiene, and quality practices.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="quality-control">
+                                <center>
+                                    <img src="customer-review.png" class="store" alt="Store Icon">
+                                    <h5 class="innerTitle">Customer Satisfaction</h5>
+                                </center>
+                                <p class="innerText">We are committed to providing our customers with the best possible experience.</p>
+                            </div>
+                        </div>
+                   </div><!--row-->
+
+                    </div><!--container-->
+                </div><!--card-->
+            </div><!--col-->
+        </div><!--row-->
+
+    </div><!--overall-->  
+
+    <br><br>
+
+
+    <div class="footer">
+        <div class="empty"></div>
+        <div class="address">
+           
+            <div class="iyappaa-address">
+
+                 <b>Head Office</b>
+
+                 <br>
+
+                IYYAPPAA SWEETS & SNACKS INC
+
+                <p>2721, Markham Road, Unit #18,
+                <br>Scaraborough-M1X 1L5, Toronto,
+                Canada</p>
+            </div>
+
+
+            <div class="branches">
+
+                <b>Branches</b>
+
+                <br>
+
+                IYYAPPAA FOOD INDUSTRIES UK LTD
+
+                <p>No 5, Mameulah Court, Newmachar,
+                <br>Aberdeenshire, Ab21OLS,
+                United Kingdom</p>
+            </div>
+
+
+            <b>Available Countries</b>
+
+            <br>
+
+            <div class="countries">
+                <div class="canada">
+                    <p>Canada</p>
+                    <img src="https://img.icons8.com/?size=100&id=Dum84gAXfBP6&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>USA</p>
+                     <img src="https://img.icons8.com/?size=100&id=yzSggttkqLf4&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>France</p>
+                     <img src="https://img.icons8.com/?size=100&id=5RtaKEr09Jy6&format=png&color=000000" class="flag">
+                </div>
+                 <div class="canada">
+                    <p>Switzerland</p>
+                     <img src="https://img.icons8.com/?size=100&id=nz6Zx2vJbzRG&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>Germany</p>
+                     <img src="https://img.icons8.com/?size=100&id=OyqucOGoByl9&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>UK</p>
+                     <img src="https://img.icons8.com/?size=100&id=xapj7ZzAUZKI&format=png&color=000000" class="flag">
+                </div>
+            </div>
+        </div>
+        <div class="footer-category">
+            <b>Categories</b>
+            <div class="category-item">
+                <p>Sweets</p>
+                <p>Snacks</p>
+                <p>Candies</p>
+                <p>Groceries</p>
+                <p>Rice</p>
+                <p>Oil</p>
+                <p>Herbal & Organic</p>
+                <p>Home Appliances</p>
+            </div>
+             <b>Popular Brands</b>
+             <div class="brand-name">
+                 <p>Iyappaa</p>
+                 <p>Amirth</p>
+                 <p>Venbaa</p>
+                 <p>Little Krishna</p>
+             </div>
+        </div><br>
+        <div class="faq">
+            <b>FAQ</b>
+            <div class="term-condition">
+                <h2>Terms & Conditions</h2>
+            </div>
+            <b>Website</b>
+            <div class="website">
+                <p>www.iyappaa.com</p>
+            </div>
+             <b>Contact Us</b><br>
+             <input type="" name="" class="contact-input"> @gmail.com
+        </div>
+    </div>
+  
+    
+
+    <script>
+    // Function to detect if the element is in the viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        const columns = document.querySelectorAll('.customers .col-md-4');
+
+        columns.forEach(function(column) {
+            if (isInViewport(column)) {
+                column.classList.add('in-view');
+            }
+        });
+    });
+</script>
+   
+    <!-- Load Bootstrap JS and Popper at the end of the body -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

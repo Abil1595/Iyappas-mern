@@ -1,0 +1,320 @@
+/* Google Fonts Import */
+
+/* Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Styles */
+.nav-item .nav-link:hover {
+    color: crimson !important;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: none !important;
+    margin-left: 90px;
+}
+
+.modal-footer {
+    border-top: none;
+    text-align: center;
+    width: 100%;
+}
+
+/* Input Styles */
+input[type="password"],
+input[type="email"],
+#signUpName,
+#signUpEmail,
+#signUpPassword,
+#signUpConfirmPassword {
+    border-radius: 10px !important;
+    padding: 15px !important;
+}
+
+/* Button Styles */
+.btn-primary {
+    border-radius: 30px !important;
+    background-color: #667eea;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #764ba2;
+}
+
+/* Modal Footer Text Styles */
+.modal-footer p {
+    font-size: 16px !important;
+}
+
+.modal-footer a {
+    color: #764ba2;
+    text-decoration: none;
+}
+
+.modal-footer a:hover {
+    color: #667eea;
+}
+
+/* Card Styles */
+.card-title {
+    font-size: 65px;
+    white-space: nowrap; /* Prevents text from breaking into a new line */
+    overflow: hidden;    /* Hides the overflow if text exceeds container */
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+.card-img {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+}
+
+.card-text {
+    font-size: 22px;
+    font-family: "Noto Serif", serif;
+    font-weight: 500;
+}
+
+/* Inner Card Title and Text Styles */
+.innerTitle {
+    font-size: 30px;
+    white-space: nowrap; /* Prevents text from breaking into a new line */
+    overflow: hidden;    /* Hides the overflow if text exceeds container */
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
+}
+
+.innerText {
+    font-size: 20px;
+}
+
+/* Quality Styles */
+.quality {
+    transition: all 0.6s ease-out; /* Smooth transition */
+    background-color: #E5E4E2; /* Card background color */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Hover Effect for Cards */
+.quality:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Customer Styles */
+.customers {
+    padding: 15px;
+}
+
+/* Commitment Styles */
+.commitment-img {
+    width: 100%; /* Full width of the container */
+    height: 350px; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area */
+}
+
+.commitment-card {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Add some padding */
+}
+
+.quality-control {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Add some padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+    text-align: center; /* Center align text */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Align items vertically */
+    justify-content: space-between; /* Space items evenly */
+    border: 1px solid #ccc;
+}
+
+.quality-control:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+h5.innerTitle,
+p.innerText {
+    margin: 10px 0; /* Add spacing to prevent overlap with other elements */
+}
+
+img.store {
+    width: 30px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.checkmark {
+    font-size: 1.8rem; /* Increase icon size */
+    color: #4caf50; /* Color of the icon */
+}
+
+.store {
+    width: 12%;
+}
+
+/* Animation Styles */
+.customers .col-md-4 {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly lower for bottom entrance */
+    padding: 15px; /* Padding inside the columns */
+    margin-bottom: 20px; /* Space between rows */
+    transition: all 0.5s ease-out; /* Smooth transition */
+}
+
+/* Entrance Animations */
+.scroll-left {
+    transform: translateX(-50px); /* Start slightly off-screen to the left */
+    opacity: 0; /* Hide initially */
+    transition: all 0.5s ease-out;
+}
+
+.scroll-right {
+    transform: translateX(50px); /* Start slightly off-screen to the right */
+    opacity: 0; /* Hide initially */
+    transition: all 0.5s ease-out;
+}
+
+.right {
+    transform: translateY(50px); /* Start slightly off-screen at the bottom */
+    opacity: 0; /* Hide initially */
+    transition: all 0.5s ease-out;
+}
+
+/* Trigger Animation When in View */
+.in-view {
+    opacity: 1; /* Element becomes visible */
+    transform: translateX(0) translateY(0); /* Reset position */
+}
+
+/* Hover Effect for Customers */
+.customers .col-md-4:hover {
+    border-color: #007bff; /* Change border color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+    background-color: #f8f9fa; /* Light background color on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 35px; /* Smaller title on mobile */
+    }
+
+    .card-text {
+        font-size: 18px; /* Smaller text on mobile */
+    }
+
+    .innerTitle {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 28px; /* Even smaller title on extra small devices */
+    }
+
+    .card-text {
+        font-size: 16px; /* Even smaller text on extra small devices */
+    }
+
+    .innerTitle {
+        font-size: 20px;
+    }
+
+    .innerText {
+        font-size: 16px;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    padding: 20px;
+    background-color: #D8B1A0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.empty {
+    flex: 10%;
+}
+
+.address {    
+    flex: 35%;
+}
+
+.canada {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.flag {
+    width: 5%;
+    margin-top: -2%;
+}
+
+.footer-category {
+    flex: 25%;
+}
+
+.countries {
+    line-height: 10px;
+}
+
+.faq {
+    flex: 30%;
+}
+
+.category-item {
+    line-height: 15px;
+}
+
+.brand-name {
+    line-height: 15px;
+}
+
+/* Responsive Footer Styles */
+@media screen and (max-width: 767px) {
+    .flag {
+        width: 10%;
+        margin-top: -8% !important;
+    }
+
+    .empty {
+        flex: 0%;
+    }
+
+    .footer-category {
+        flex: 25%;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .faq {
+        flex: 25%;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .countries {
+        margin-top: 5%;
+    }
+}

@@ -1,0 +1,29 @@
+.category-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 20px; /* Space below category buttons */
+}
+
+.category-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dee1e4; /* Bootstrap primary color */
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    text-transform: uppercase; /* Uppercase text */
+}
+
+.category-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    color: white;
+}
+
+.category-button.active {
+    background-color: #0056b3; /* Active button color */
+    font-weight: bold; /* Bold text for active button */
+    color: white;
+}
